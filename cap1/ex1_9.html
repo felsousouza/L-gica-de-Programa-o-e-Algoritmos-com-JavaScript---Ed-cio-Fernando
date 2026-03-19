@@ -1,0 +1,9 @@
+<script>
+    //toFixed(2) serve para limitar o número de casas decimais a 2, ou seja, centavos
+    // \n serve para quebrar a linha
+    numJantar = Number(prompt("Valor do jantar:"));
+    gorjeta = numJantar * 0.1;
+    total = numJantar + gorjeta;
+    alert("Taxa Garçom R$: " + gorjeta.toFixed(2) + "\nTotal R$: " +
+total.toFixed(2));
+</script>
