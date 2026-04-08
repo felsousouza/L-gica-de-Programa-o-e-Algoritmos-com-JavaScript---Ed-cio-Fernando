@@ -1,0 +1,30 @@
+<!--
+SORT() & REVERSE() 
+
+sort() = ordem crescente
+reverse() = inverte a ordem original (usar junto com sort() e ele inverterá para decrescente)-->
+<!--<script>
+    var nomes = ["Pedro", "Ana", "João"];
+    nomes.sort();
+    alert(nomes.join(", ")); // Ana, João, Pedro
+    nomes.reverse();
+    alert(nomes.join(", ")); // Pedro, João, Ana
+</script>
+-->
+
+
+<!--
+ORDENAR ITENS NUMÉRICOS DE UM VETOR
+
+OBS.: todo item de um vetor, é considerado string.
+Então antes de ordenar, é preciso criar um function que compara o itens
+como números, e ai sim coloca na ordem de menor para o maior.
+Esse conceito será melhor explicado no cap 7.
+Ex. abaixo:-->
+<script>
+    var numeros = [50, 100, 2];
+    numeros.sort();
+    alert(numeros.join(", ")); // 100, 2, 50
+    numeros.sort(function (a, b) { return a - b });
+    alert(numeros.join(", ")); // 2, 50, 100
+</script>

@@ -1,0 +1,67 @@
+<!--
+METODOS DE INCLUSÃO E EXCLUSÃO DE ITENS
+
+push()
+Adiciona elemementos dentro do array. 
+
+unshift()
+Adiciona um elemento ao início do vetor e desloca os elementos existentes uma posição abaixo.
+
+
+pop()
+Remove o último elemento do vetor.
+
+
+shift() Remove o primeiro elemento do vetor e desloca os elementos existentes
+uma posição acima
+
+slice() Faz um copia do array em uma let/variavel de copia
+
+splice() Inseri um elemento no meio do vetor(não tem exemplo nesse livro, diz para pesquisar como usar)
+-->
+<!--<script>
+    var cidades = ["Pelotas"]; // declara e define conteúdo inicial do vetor
+    // cidades[0] = "Pelotas"
+
+    cidades.push("São Lourenço"); // adiciona cidade ao final do vetor
+    // cidades[0] = "Pelotas"
+    // cidades[1] = "São Lourenço";
+
+    cidades.unshift("Porto Alegre"); // adiciona ao início e desloca as
+    demais
+    // cidades[0] = "Porto Alegre"
+    // cidades[1] = "Pelotas"
+    // cidades[2] = "São Lourenço";
+
+    var retirada = cidades.pop(); // remove a última cidade do vetor
+    // cidades[0] = "Porto Alegre"
+    // cidades[1] = "Pelotas"
+
+    retirada = cidades.shift(); // remove a primeira e "sobe" as demais
+    // cidades[0] = "Pelotas"
+</script>
+-->
+
+
+
+
+<!--
+EXIBIÇÃO DOS ITENS DO VETOR
+
+*length* serve para exibir o numero total de elementos que tem dentro do vetor
+Usando como exemplo abaixo, length esta sendo usado com um for. Enquanto var i for < que length
+o laço irá se repetir.-->
+<!--<script> 
+    var cidades = ["Pelotas", "São Lourenço", "Porto Alegre"];
+    for (var i = 0; i < cidades.length; i++) {
+        alert(cidades[i]);
+    }
+</script>-->
+
+<!--toString() e join() exibem os elementos de um vetor convertendo em string.
+toString() = uma virgula separa os elementos
+join() = Eu escolho o que irá separar. Se nao for indicado qual será o separador, irá exibir igual a toString-->
+<script>
+    var cidades = ["Pelotas", "São Lourenço", "Porto Alegre"];
+    alert(cidades.toString() + "\n\n" + cidades.join(" - "));
+</script>

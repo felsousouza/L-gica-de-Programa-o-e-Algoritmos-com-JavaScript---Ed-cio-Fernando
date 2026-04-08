@@ -1,0 +1,17 @@
+<!--
+VETORES DE OBJETOS
+
+Os vetores podem ser utilizados para "guardar" objetos, com seus atributos.
+Nesse script, o vetor é inicialmente declarado. Em seguida, são realizadas
+duas inclusões de veículos. Atente para a sintaxe que identi ca um vetor
+de objetos: deve-se utilizar as chaves {} para delimitar os atributos e cada
+atributo deve ser seguido pelos “:” e pelo valor que será atribuído a ele. Na sequência do script, utilizamos o comando 
+for para percorrer os elementos do vetor e apresentar o conteúdo de cada um dos seus atributos.-->
+<script>
+    var carros = [];
+    carros.push({ modelo: "Fusca", preco: 6500 });
+    carros.push({ modelo: " scort", preco: 7800 });
+    for (var i = 0; i < carros.length; i++) {
+        alert(carros[i].modelo + " - R$: " + carros[i].preco);
+    }
+</script>

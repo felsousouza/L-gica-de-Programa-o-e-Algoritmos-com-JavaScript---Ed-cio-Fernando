@@ -1,0 +1,22 @@
+<!--nesta [area de pesquisar e filtrar dados esta sendo ensinado o conceito de
+variavel de controle.
+
+Essa variável, também denominada ag ou
+sinalizador, recebe um valor inicial antes da repetição. Caso a condição
+dentro do laço seja verdadeira, modi ca-se o valor da variável. Após o
+laço, deve-se veri car, então, se a variável mantém o valor inicial. Isso
+signi ca que a condição testada no laço não ocorreu e que, portanto, a
+mensagem indicativa deve ser exibida.-->
+<script>
+    var idades = [12, 16, 15, 17, 14];
+    var maiores = false;
+    for (var i = 0; i < idades.length; i++) {
+        if (idades[i] >= 18) {
+            alert(idades[i]);
+            maiores = true;
+        }
+    }
+    if (!maiores) {
+        alert("Não há idades maiores que 18 na lista");
+    }
+</script>
