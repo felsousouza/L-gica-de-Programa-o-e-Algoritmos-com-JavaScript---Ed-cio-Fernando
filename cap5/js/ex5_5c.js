@@ -62,15 +62,21 @@ function listarAprovados() {
         if (copia[i].acertos >= numAcertos) {
             /*Esta é a forma correta de colocar elementos dentro de um array (const aprovados = []). */
             aprovados.push(copia[i]);
-            listaAprovados += aprovados[i].nome + " - " + aprovados[i].acertos +" acertos\n";
+            listaAprovados += aprovados[i].nome + " - " + aprovados[i].acertos + " acertos\n";
         }
+
 
     }
     //referencia de outLista
     let outLista = document.getElementById("outLista");
-    //saida de resultado
-    outLista.textContent = listaAprovados;
-    
+    //condição para mostrar mensagens diferentes se nao houver aprovação
+    if (aprovados.length == 0) {
+        alert("Nenhum candidato passou na prova!");
+        outLista.textContent = "";
+        return;
+    } else {
+        outLista.textContent = listaAprovados;
+    }
 
 } let btAprovados = document.getElementById("btAprovados");
 btAprovados.addEventListener("click", listarAprovados)
