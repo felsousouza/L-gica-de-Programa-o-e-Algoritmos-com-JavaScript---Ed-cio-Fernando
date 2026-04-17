@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Notícias</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        header, footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #003366;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .card h2 {
+            color: #003366;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .input-group input:focus {
+            outline: none;
+            border-color: #003366;
+        }
+
+        button {
+            background-color: #003366;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #002244;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        .info {
+            text-align: center;
+            font-weight: 600;
+            color: #555;
+            margin-top: 1rem;
+        }
+
+        #outNoticias {
+            list-style-type: none;
+            margin-top: 1rem;
+        }
+
+        #outNoticias li {
+            background-color: #f8f9fa;
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            border-left: 4px solid #003366;
+            border-radius: 0 4px 4px 0;
+        }
+
+        @media (min-width: 600px) {
+            .input-group {
+                display: flex;
+                gap: 1rem;
+            }
+
+            .input-group label {
+                flex: 0 0 150px;
+            }
+
+            .input-group input {
+                flex: 1;
+            }
+
+            button {
+                width: auto;
+                padding: 0.75rem 2rem;
+            }
+
+            .card {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Gerenciador de Notícias Regionais</h1>
+    </header>
+    <main>
+        <section class="card">
+            <h2>Adicionar Notícia</h2>
+            <div class="input-group">
+                <label for="inputNoticia">Digite a notícia:</label>
+                <input type="text" id="inNoticia" placeholder="Ex: Prefeitura inaugura nova ponte">
+            </div>
+            <button id="btAdicionar">Adicionar notícia</button>
+            <p class="info">Quantidade de notícias cadastradas: <span id="outContador">0</span></p>
+        </section>
+
+        <section class="card">
+            <h2>Visualizar Notícias Recentes</h2>
+            <div class="input-group">
+                <label for="inputQuantidade">Quantas notícias deseja visualizar?</label>
+                <input type="number" id="inQuantidade" min="1" placeholder="Ex: 3">
+            </div>
+            <button id="btVisualizar">Visualizar</button>
+            <h3>Notícias (mais recente primeiro):</h3>
+            <ul id="outNoticias"></ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Exercício de Lógica de Programação</p>
+    </footer>
+    <script src="js/ex5_5d.js"></script>
+</body>
+</html>
